@@ -1,11 +1,11 @@
-# sunst0rm
+# **sunst0rm**
 iOS Tether Downgrader for checkm8 devices
 
-Based on [my guide](https://github.com/mineek/iostethereddowngrade)
+An automated solution to [my previous guide](https://github.com/mineek/iostethereddowngrade).
 
 ## Join the [Discord](https://discord.gg/TqVH6NBwS3) server for help
 
-## Requirements:
+## **Requirements**:
 - [libirecovery](https://github.com/libimobiledevice/libirecovery)
 - [futurerestore (fork)](https://github.com/futurerestore/futurerestore)
    - futurerestore must be the nightly build. A compiled binary can be found [here](https://nightly.link/futurerestore/futurerestore/workflows/ci/test)
@@ -24,16 +24,17 @@ Based on [my guide](https://github.com/mineek/iostethereddowngrade)
 **Make sure to use the forks listed above.**
 
 ## How to use?
-| Option (short)  | Option (long)               | Description                              |
-|-----------------|-----------------------------|------------------------------------------|
-| `-i IPSW`       | `--ipsw IPSW`               | Path to IPSW                             |
-| `-t SHSH2`      | `--blob SHSH2`              | Path to SHSH2                            |
-| `-r true`       | `--restore true`            | Restore mode                             |
-| `-b true`       | `--boot true`               | Boot mode                                |
-| `-d BOARDCONFIG`| `--boardconfig BOARDCONFIG` | BoardConfig to use  (E.g: `d221ap`)      |
-| `-kpp true`     | `--kpp true`                | Use KPP (A9 or lower)                    |
-| `-id IDENTIFIER`| `--identifier IDENTIFIER`   | Identifier to use  (E.g: `iPhone10,6`)   |
-|                 | `--legacy true`                  | Use Legacy Mode (iOS 11 or lower)        |
+| **Flag[Short]** | **Description**                          |
+|-----------------|------------------------------------------|
+| ispw[-i] `IPSW`              | Path to IPSW                          |
+| blob[-t] `SHSH2`             | Path to SHSH2                         |
+| restore[-r] `true`           | Restore mode                          |
+| boot[-b] `true`              | Boot mode                             |
+| boardconfig[-d] `BOARDCONFIG`| BoardConfig to use  (E.g: `d221ap`)   |
+| kpp[-kpp] `true`             | Use KPP (A9 or lower)                 |
+| identifier[-id] `IDENTIFIER` | Identifier to use  (E.g: `iPhone10,6`)|
+| legacy `true`                | Use Legacy Mode (iOS 11 or lower)     |
+
 ### Restoring
 ```py
 python3 sunstorm.py -i 'IPSW' -t 'SHSH2' -r true -d 'BOARDCONFIG'
